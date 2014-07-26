@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+
+<h2> Shop Category </h2>
+      <%= render 'shared/shop_category_show' %>
+
+<h2> Product Categories </h2>
+      <%= render 'shared/product_categories_index' %>
+
+    </table>      
+  </div>
+</div>
+
+<%= link_to 'Add a new Product Category', new_shop_category_product_category_path(@shop_category) %> #clashes with edit form.
+
+<section>
+<h2> Create a New Product Category </h2>
+
+    <%= render 'shared/form_new_product_category' %>
+
+</section>
+
+<%= link_to 'Back', shop_categories_path %>

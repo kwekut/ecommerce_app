@@ -1,0 +1,41 @@
+<table>
+  <thead>
+    <tr>
+        <th> Product Group </th>
+        <th> Product Subgroup </th>
+        <th> Product Type </th>
+        <th> Product Gender </th>
+        <th> Product Other Category </th>
+        <th> Product Size </th>
+        <th> Product Pack Size </th>
+        <th> Product Box Size </th>
+        <th> Product Bottle Size </th>
+        <th> Product Service Time </th>
+        <th> Product Color </th>
+        <th> Product Other </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @product_categories.each do |product_categories| %>
+      <tr>
+        <td><%= product_categories.product_group %></td>
+        <td><%= product_categories.product_subgroup %></td>
+        <td><%= product_categories.product_type %></td>
+        <td><%= product_categories.product_gender %></td>
+        <td><%= product_categories.other_product_category %></td>
+        <td><%= product_categories.product_size %></td>
+        <td><%= product_categories.product_pack_size %></td>
+        <td><%= product_categories.product_box_size %></td>
+        <td><%= product_categories.product_bottle_size %></td>
+        <td><%= product_categories.product_service_time %></td>
+        <td><%= product_categories.product_color %></td>
+        <td><%= product_categories.other %></td>
+        <td><%= link_to 'Show', product_categories %></td>
+        <td><%= link_to 'Edit', edit_product_category_path(product_categories) %></td>
+        <td><%= link_to 'Destroy', product_categories, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

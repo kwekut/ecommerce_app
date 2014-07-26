@@ -1,0 +1,27 @@
+defaults: &defaults
+  host: 127.0.0.1
+  port: 27017
+  options:
+    w: 1
+    pool_size: 1
+    slave_ok: false
+    ssl: false
+
+development:
+  <<: *defaults
+  database: ecommerce_app_development
+
+test:
+  <<: *defaults
+  database: ecommerce_app_test
+  w: 0
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  database: ecommerce_app
+  username: <%= ENV['MONGO_USERNAME'] %>
+  password: <%= ENV['MONGO_PASSWORD'] %>
+# set these environment variables on your prod server heroku
+#production:
+#  uri: <%= ENV['MONGODB_URI'] %

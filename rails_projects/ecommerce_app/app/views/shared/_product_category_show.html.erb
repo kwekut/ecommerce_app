@@ -1,0 +1,36 @@
+      <thead>
+        <tr>
+        <th> Product Group </th>
+        <th> Product Subgroup </th>
+        <th> Product Type </th>
+        <th> Product Gender </th>
+        <th> Product Other Category </th>
+        <th> Product Size </th>
+        <th> Product Pack Size </th>
+        <th> Product Box Size </th>
+        <th> Product Bottle Size </th>
+        <th> Product Service Time </th>
+        <th> Product Color </th>
+        <th> Product Other </th>
+        </tr>
+      </thead>
+      <tbody>    
+      <% @product_category.each do |product_category| %>
+        <tr>  
+        <td><%= product_category.product_group %></td>
+        <td><%= product_category.product_subgroup %></td>
+        <td><%= product_category.product_type %></td>
+        <td><%= product_category.product_gender %></td>
+        <td><%= product_category.other_product_category %></td>
+        <td><%= product_category.product_size %></td>
+        <td><%= product_category.product_pack_size %></td>
+        <td><%= product_category.product_box_size %></td>
+        <td><%= product_category.product_bottle_size %></td>
+        <td><%= product_category.product_service_time %></td>
+        <td><%= product_category.product_color %></td>
+        <td><%= product_category.other %></td>
+        <td><%= link_to 'Edit', edit_product_category_path(product_category) %></td>
+        <td><%= link_to 'Delete', @product_category, method: :delete, data: { confirm: 'are you sure?' } %></td>
+        </tr>
+      <% end %>  
+      </tbody>

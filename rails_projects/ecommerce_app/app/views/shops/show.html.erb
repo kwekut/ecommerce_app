@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shop title:</strong>
+  <%= @shop.shop_title %>
+</p>
+<p>
+  <strong>Shop banner:</strong>
+  <%= image_tag @shop.shop_banner %>
+</p>
+<p>
+  <strong>Shop Menu:</strong>
+  <%= link_to 'Menu', shop_products_path(@shop) %>
+</p>
+<p>
+  <strong>Follow Shop :</strong>
+  <%= 'follow link here' %>
+</p>
+<p>
+  <strong>Reservation:</strong>
+  <%= 'make reservation link here' %>
+</p>
+<p>
+  <strong>Rate Shop:</strong>
+  <%= 'rate shop link' %>
+</p>
+<p>
+  <strong>Shop Address:</strong>
+  <%= 'from user address' %>
+</p>
+<p>
+  <strong>Shop info:</strong>
+  <%= @shop.shop_info %>
+</p>
+<p>
+  <strong>Shop about:</strong>
+  <%= @shop.shop_about %>
+</p>
+<p>
+  <strong>Shop hours:</strong>
+  <%= @shop.shop_hours %>
+</p>
+<p>
+  <strong>Shop url:</strong>
+  <%= @shop.shop_url %>
+</p>
+<p>
+  <strong>Shop gallery:</strong>
+  <%= @shop.shop_gallery %>
+</p>
+<p>
+  <strong>Shop slug:</strong>
+  <%= @shop.shop_slug %>
+</p>
+<%= link_to 'Edit', edit_shop_path(@shop) %> |
+<%= link_to 'Back', shops_path %>
+

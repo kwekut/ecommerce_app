@@ -1,0 +1,20 @@
+      <thead>
+        <tr>
+        <th> Industry </th>
+        <th> Segment </th>
+        <th> Specialty </th>
+        <th> Product Type </th>
+        <th> Other </th>
+        </tr>
+      </thead>
+      <tbody>        
+        <tr>          
+        <td><%= @shop_category.industry %></td>
+        <td><%= @shop_category.segment  %></td>
+        <td><%= @shop_category.specialty %></td>
+        <td><%= @shop_category.product_type %></td>
+        <td><%= @shop_category.other %></td>
+        <td><%= link_to 'Edit', edit_shop_category_path(@shop_category) %></td>
+        <td><%= link_to 'Delete', (@shop_category), method: :delete, confirm: 'are you sure ?'%></td>
+        </tr>
+      </tbody>

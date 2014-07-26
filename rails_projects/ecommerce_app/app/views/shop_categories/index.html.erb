@@ -1,0 +1,11 @@
+<h1>Listing shop_categories</h1>
+
+<% if @shop_categories %>
+<%= render 'shared/shop_categories_index' %>
+<% else %>
+<%= No Shop Categories In Database %>
+<% end %>
+
+<br>
+
+<%= link_to 'New Shop category', new_shop_category_path %>

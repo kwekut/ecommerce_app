@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+'Jquery'
+[microposts, reservations, orders] 
+
+'Links'
+[inbox/outbox, followers#, ratings#, reservations#]
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<%= link_to 'Edit Profile', edit_user_path(@user) %> |
+<%= link_to 'Favorites/Followers', users_path %>
+<%= link_to 'Add Shop', new_user_shop_path(@user) %>
+<%= link_to "Sign out", signout_path, method: "delete"  %> 
+
+<% if @shop != nil %>
+<%= link_to 'Edit Shop', edit_user_shop_path[@user, @shop] %>
+<%= link_to 'Add Product', new_user_product_path(@user) %>
+<%= link_to 'Show Products', user_products_path(@user) %>
+<%= link_to 'Destroy Shop', @shop, method: :delete, data: { confirm: 'Are you sure?' } %> temporal
+<% end %>

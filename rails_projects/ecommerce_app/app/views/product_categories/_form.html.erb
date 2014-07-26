@@ -1,0 +1,67 @@
+<%= form_for (@product_category) do |f| %>
+  <% if @shop_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shop_category.errors.count, "error") %> prohibited this product_category from being saved:</h2>
+
+      <ul>
+      <% @shop_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product_group %><br>
+    <%= f.text_field :product_group %>
+  </div>
+  <div class="field">
+    <%= f.label :product_subgroup %><br>
+    <%= f.text_field :product_subgroup %>
+  </div>
+  <div class="field">
+    <%= f.label :product_type %><br>
+    <%= f.text_field :product_type %>
+  </div>
+  <div class="field">
+    <%= f.label :product_gender %><br>
+    <%= f.text_field :product_gender %>
+  </div>
+  <div class="field">
+    <%= f.label :other_product_category %><br>
+    <%= f.text_field :other_product_category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product_size %><br>
+    <%= f.text_field :product_size %>
+  </div>
+  <div class="field">
+    <%= f.label :product_pack_size %><br>
+    <%= f.text_field :product_pack_size %>
+  </div>
+  <div class="field">
+    <%= f.label :product_box_size %><br>
+    <%= f.text_field :product_box_size %>
+  </div>
+  <div class="field">
+    <%= f.label :product_bottle_size %><br>
+    <%= f.text_field :product_bottle_size %>
+  </div>
+  <div class="field">
+    <%= f.label :product_service_time %><br>
+    <%= f.text_field :product_service_time %>
+  </div>
+  <div class="field">
+    <%= f.label :product_color %><br>
+    <%= f.text_field :product_color %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br>
+    <%= f.text_field :other %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

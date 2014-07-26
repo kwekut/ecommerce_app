@@ -1,0 +1,12 @@
+<h1>Editing shop_category</h1>
+<h2> Shop Categories </h2>
+
+<% if @shop_categories %>
+<%= render 'shared/shop_categories_index' %>
+<% end %>
+
+<h2> Edit Shop Category </h2>
+<%= render 'form' %>
+
+<%= link_to 'Show', @shop_category %> |
+<%= link_to 'Back', shop_categories_path %>

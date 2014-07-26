@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+<h1>Listing shops</h1>
+  <thead>
+    <tr>
+      <th>Shop title</th>
+      <th>Shop banner</th>
+      <th>Shop info</th>
+      <th>Shop about</th>
+      <th>Shop hours</th>
+      <th>Shop url</th>
+      <th>Shop gallery</th>
+      <th>Shop slug</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shops.each do |shop| %>
+      <tr>
+        <td><%= shop.shop_title %></td>
+        <td><%= shop.shop_banner %></td>
+        <td><%= shop.shop_info %></td>
+        <td><%= shop.shop_about %></td>
+        <td><%= shop.shop_hours %></td>
+        <td><%= shop.shop_url %></td>
+        <td><%= shop.shop_gallery %></td>
+        <td><%= shop.shop_slug %></td>
+        <td><%= link_to 'Show', shop %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  </div>
+</div>
+
+<br>
+

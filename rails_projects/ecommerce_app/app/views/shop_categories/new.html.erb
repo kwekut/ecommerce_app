@@ -1,0 +1,12 @@
+<h1>A new shop category?</h1>
+
+<h2> Shop Categories </h2>
+
+<% if @shop_categories %>
+<%= render 'shared/shop_categories_index' %>
+<% end %>
+
+<h2> Create New Shop Category </h2>
+<%= render 'form' %>
+
+<%= link_to 'Back', shop_categories_path %>
